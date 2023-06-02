@@ -2,42 +2,43 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
+import Rodape  from './componentes/Rodape';
 
 function App() {
 
   const times = [
     {
-      nome: 'Programação',
+      nome: 'Wind',
       corPrimaria: '#57C278',
       corSecundaria: '#D9F7E9'
     },
     {
-      nome: 'Front-End',
+      nome: 'Water',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF'
     },
     {
-      nome: 'Data Science',
+      nome: 'Thunder',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2'
     },
     {
-      nome: 'Devops',
+      nome: 'Fire',
       corPrimaria: '#E06B69',
       corSecundaria: '#FDE7E8'
     },
     {
-      nome: 'UX e Design',
+      nome: 'Psych',
       corPrimaria: '#DB6EBF',
       corSecundaria: '#FAE9F5'
     },
     {
-      nome: 'Mobile',
+      nome: 'Fighter',
       corPrimaria: '#FFBA05',
       corSecundaria: '#FFF5D9'
     },
     {
-      nome: 'Inovação e Gestão',
+      nome: 'Flying',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
@@ -46,7 +47,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    debugger
+    console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -61,7 +62,10 @@ function App() {
         corPrimaria={time.corPrimaria} 
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-      />)}   
+
+      />)}
+
+      <Rodape />   
 
     </div>
   );

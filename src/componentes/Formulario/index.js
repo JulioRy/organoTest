@@ -28,7 +28,7 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Preencha os dados para criar o card do seu Pokemon</h2>
                 <CampoTexto 
                     obrigatorio={true}
                     label="Nome"
@@ -38,8 +38,8 @@ const Formulario = (props) => {
                 />
                 <CampoTexto
                     obrigatorio={true}
-                    label="Cargo"
-                    placeholder="Digite seu cargo" 
+                    label="Elemento"
+                    placeholder="Digite o Elemento do seu Pokemon" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
